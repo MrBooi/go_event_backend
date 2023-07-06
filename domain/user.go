@@ -29,3 +29,10 @@ type UserRepository interface {
 	FindAndUpdateUser(ctx context.Context, userId string, userData *User) error
 	FindUser(ctx context.Context, userId string) (User, error)
 }
+
+type UserUserCase interface {
+	CreateUser(ctx context.Context, user *User) error
+	ValidateUser(ctx context.Context, email string, uuid string) (User, error)
+	FindAndUpdateUser(ctx context.Context, userId string, userData *User) error
+	FindUser(ctx context.Context, userId string) (User, error)
+}
