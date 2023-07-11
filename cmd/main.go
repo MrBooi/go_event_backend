@@ -25,7 +25,7 @@ func main() {
 
 	routes.Setup(env, timeout, db, gin)
 
-	// getup middleware to deserializeUser
+	// setup middleware to deserializeUser
 	// gin.Use(deserializeUser)
 
 	err := gin.Run(env.ServerAddress)
