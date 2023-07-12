@@ -7,18 +7,18 @@ import (
 )
 
 type Env struct {
-	AppEnv                 string `json:"APP_ENV"`
-	ServerAddress          string `json:"SERVER_ADDRESS"`
-	ContextTimeout         int    `json:"CONTEXT_TIMEOUT"`
-	DBHost                 string `json:"DB_HOST"`
-	DBPort                 string `json:"DB_PORT"`
-	DBUser                 string `json:"DB_USER"`
-	DBPass                 string `json:"DB_PASS"`
-	DBName                 string `json:"DB_NAME"`
-	AccessTokenExpiryHour  int    `json:"ACCESS_TOKEN_EXPIRY_HOUR"`
-	RefreshTokenExpiryHour int    `json:"REFRESH_TOKEN_EXPIRY_HOUR"`
-	AccessTokenSecret      string `json:"ACCESS_TOKEN_SECRET"`
-	RefreshTokenSecret     string `json:"REFRESH_TOKEN_SECRET"`
+	AppEnv                 string `mapstructure:"APP_ENV"`
+	ServerAddress          string `mapstructure:"SERVER_ADDRESS"`
+	ContextTimeout         int    `mapstructure:"CONTEXT_TIMEOUT"`
+	DBHost                 string `mapstructure:"DB_HOST"`
+	DBPort                 string `mapstructure:"DB_PORT"`
+	DBUser                 string `mapstructure:"DB_USER"`
+	DBPass                 string `mapstructure:"DB_PASS"`
+	DBName                 string `mapstructure:"DB_NAME"`
+	AccessTokenExpiryHour  int    `mapstructure:"ACCESS_TOKEN_EXPIRY_HOUR"`
+	RefreshTokenExpiryHour int    `mapstructure:"REFRESH_TOKEN_EXPIRY_HOUR"`
+	AccessTokenSecret      string `mapstructure:"ACCESS_TOKEN_SECRET"`
+	RefreshTokenSecret     string `mapstructure:"REFRESH_TOKEN_SECRET"`
 }
 
 func NewEnv() *Env {
