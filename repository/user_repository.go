@@ -48,7 +48,7 @@ func (ur *userRepository) FindUser(ctx context.Context, userId string) (domain.U
 func (ur *userRepository) ValidateUser(ctx context.Context, email string, uuid string) (domain.User, error) {
 	collection := ur.database.Collection(ur.collection)
 	var user domain.User
-	
+
 	err := collection.FindOne(ctx, bson.M{"email": email, "uuid": uuid}).Decode(&user)
 	return user, err
 }

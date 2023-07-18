@@ -25,9 +25,6 @@ func main() {
 
 	routes.Setup(env, timeout, db, gin)
 
-	// setup middleware to deserializeUser
-	// gin.Use(deserializeUser)
-
 	err := gin.Run(env.ServerAddress)
 	if err != nil {
 		fmt.Println("Failed while setting up App routes.")
